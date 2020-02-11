@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My movies</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://kit.fontawesome.com/60fe9eb959.js" crossorigin="anonymous"></script>
+</head>
+<body onhashchange="pageChange()">
+
+
+<nav class="tabbar">
+  <a href="#movies"><i class="fas fa-film"></i></a>
+  <a href="#genre"><i class="fas fa-theater-masks"></i></a>
+  <a href="#" onclick="toggleSearch()"><i class="fas fa-search"></i></a>
+</nav>
+
+<div id="searchbar" class="search">
+  <input type="search" placeholder="Search" onkeyup="search(this.value)">
+  <div class="clickaway" onclick="toggleSearch()"></div>
+</div>
+
+<section  id="movies" class="page">
+  <section id="movies_container" class="content"></section>
+</section>
+
+<section  id="genre" class="page">
+  <div class="select-container">
+  <select id="select-genre" name="genre" onchange="genreSelected(this.value)">
+      <option value="5">Select Genre</option>
+  </select>
+  <section id="movies-by-genre-container" class="content"></section>
+  </div>
+</section>
+
+<section id="detail-view" class="page">
+  
+</section>
+
+
+<script src="js/main.js"></script>
+<script src="js/spa.js"></script>
+
+</body>
+</html>
